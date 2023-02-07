@@ -19,11 +19,6 @@ namespace Payment.Infrastructure.Repositories
         }
         public async Task<ApplicationUser> GetUser(string email)
         {
-            var x = await context.Users.Where(u => u.Email == email).FirstOrDefaultAsync();
-            if (x== null)
-            {
-                Console.WriteLine("Whats up");
-            }
 
             return await context.Users.Where(u => u.Email == email).FirstOrDefaultAsync();
         }
